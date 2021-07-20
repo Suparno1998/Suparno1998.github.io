@@ -46,7 +46,8 @@ app.controller('MainController', ['$scope', '$window', function($scope, $window)
     'github': 'https://github.com/Suparno1998',
     'linkedin': 'https://www.linkedin.com/in/suparno-karmakar',
     'facebook': 'https://www.facebook.com/suparno1729',
-    'mit': 'https://opensource.org/licenses/MIT'
+    'mit': 'https://opensource.org/licenses/MIT',
+    'resume' : 'https://drive.google.com/file/d/1skaXpJgIFtZOsUCXI6nL6HJnZEKDdJyl/view?usp=sharing',
   };
   $scope.href = function(src) {
     $window.open(href[src], '_blank');
