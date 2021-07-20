@@ -60,13 +60,6 @@ app.controller('MainController', ['$scope', '$window', function($scope, $window)
       for (var i in en) {
         $scope[i] = en[i];
       }
-    } else if (str === 'zh') {
-      localStorage.lang = 'zh';
-      $scope.isZh = true;
-      $scope.isEn = false;
-      for (var j in zh) {
-        $scope[j] = zh[j];
-      }
     }
   };
   if (localStorage.visited) {
