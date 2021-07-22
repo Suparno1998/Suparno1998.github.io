@@ -1,108 +1,23 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Suparno's Portfolio</title>
   <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" /><link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
-<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.css'>
-<link rel="stylesheet" href="./assets/css/style.css">
-
-</head>
+  <title>Portfolio</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel='stylesheet' href='assets/font-awesome-4.7.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="assets/css/demo.css">
+  <link rel="stylesheet" href="assets/css/stylev2.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="styles.0128cec20ec27c024f7d.css"></head>
 <body>
-<!-- partial:index.partial.html -->
-<body ng-app="app" ng-controller="MainController">
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand">{{brand}}</a>
-      </div>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav" id="myMenu">
-          <li data-menuanchor="Home"><a href="#Home">{{home}}</a></li>
-          <li data-menuanchor="About"><a href="#About">{{about}}</a></li>
-          <li data-menuanchor="Portfolio"><a href="#Portfolio">{{portfolio}}</a></li>
-          <li data-menuanchor="Contact"><a href="#Contact">{{contact}}</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <div id="fullpage">
-    <div class="jumbotron section" data-anchor="Home">
-      <div class="container-fluid">
-        <h1>{{title}}</h1>
-        <p>{{desc}}</p>
-        <hr />
-        <a class="btn btn-default btn-lg" ng-click="href('twitter')" role="button"><i class="fa fa-twitter"></i>&nbsp;&nbsp;Twitter</a>
-        <a class="btn btn-default btn-lg" ng-click="href('github')" role="button"><i class="fa fa-github"></i>&nbsp;&nbsp;GitHub</a>
-        <a class="btn btn-default btn-lg" ng-click="href('linkedin')" role="button"><i class="fa fa-linkedin"></i>&nbsp;&nbsp;LinkedIn</a>
-        <a class="btn btn-default btn-lg" ng-click="href('facebook')" role="button"><i class="fa fa-facebook"></i>&nbsp;&nbsp;Facebook</a>
-        <a class="btn btn-default btn-lg" ng-click="href('resume')" role="button"><i class="fa fa-file"></i>&nbsp;&nbsp;Resume</a>
-      </div>
-    </div>
-    <div class="jumbotron section" data-anchor="About">
-      <div class="container-fluid">
-        <h2>{{aboutMe}}</h2>
-        <hr />
-        <p class="resume col-lg-6 col-md-6 col-sm-12 col-xs-12" ng-bind-html="resume | toHtml"></p>
-        <div class="pic col-lg-6 col-md-6 col-sm-12 col-xs-12">
-          <img class="image" src="./assets/img/20201025_222508.jpg" />
-        </div>
-      </div>
-    </div>
-    <div class="jumbotron section" data-anchor="Portfolio">
-      <div class="container-fluid">
-        <h2 id="works">{{works}}</h2>
-        <hr id="works-hr" />
-        <div class="portfolio col-lg-4 col-md-4 col-sm-12 col-xs-12 mx-1 my-1" ng-repeat="portfolio in portfolios">
-          <a class="portfolio-link" ng-href="{{portfolio.href}}" new-tab>
-            <img class="portfolio-img" ng-src="{{portfolio.src}}" />
-            <div class="portfolio-desc">{{portfolio.desc}}</div>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="jumbotron section" data-anchor="Contact">
-      <div class="container-fluid">
-        <h1>{{contactMe}}</h1>
-        <hr />
-        <h2>{{name}}</h2>
-        <h2><a class="email" href="mailto:ssuparno1998@gmail.com">ssuparno1998@gmail.com</a></h2>
-        <hr />
-        <a class="github-button" href="https://github.com/Suparno1998" data-style="mega" data-count-href="/Suparno1998/followers" data-count-api="/users/Suparno1998#followers" data-count-aria-label="# followers on GitHub" aria-label="Follow @Suparno1998 on GitHub"
-        new-tab>Follow @Suparno1998</a>
-        <a class="github-button" href="https://github.com/Suparno1998/Suparno1998.github.io" data-icon="octicon-eye" data-style="mega" data-count-href="/Suparno1998/Suparno1998.github.io/watchers" data-count-api="/repos/Suparno1998/Suparno1998.github.io#subscribers_count"
-        data-count-aria-label="# watchers on GitHub" aria-label="Watch Suparno1998/Suparno1998.github.io on GitHub" new-tab>Watch</a>
-        <a class="github-button" href="https://github.com/Suparno1998/Suparno1998.github.io" data-icon="octicon-star" data-style="mega" data-count-href="/Suparno1998/Suparno1998.github.io/stargazers" data-count-api="/repos/Suparno1998/Suparno1998.github.io#stargazers_count"
-        data-count-aria-label="# stargazers on GitHub" aria-label="Star Suparno1998/Suparno1998.github.io on GitHub" new-tab>Star</a>
-        <a class="github-button" href="https://github.com/Suparno1998/Suparno1998.github.io/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/Suparno1998/Suparno1998.github.io/network" data-count-api="/repos/Suparno1998/Suparno1998.github.io#forks_count"
-        data-count-aria-label="# forks on GitHub" aria-label="Fork Suparno1998/Suparno1998.github.io on GitHub" new-tab>Fork</a>
-        <a class="github-button" href="https://github.com/Suparno1998/Suparno1998.github.io/issues" data-icon="octicon-issue-opened" data-style="mega" data-count-api="/repos/Suparno1998/Suparno1998.github.io#open_issues_count" data-count-aria-label="# issues on GitHub"
-        aria-label="Issue Suparno1998/Suparno1998.github.io on GitHub" new-tab>Issue</a>
-        <a class="github-button" href="https://github.com/Suparno1998/Suparno1998.github.io/archive/master.zip" data-icon="octicon-cloud-download" data-style="mega" aria-label="Download Suparno1998/Suparno1998.github.io on GitHub" new-tab>Download</a>
-        <p>{{licensePre}}<a class="mit" ng-click="href('mit')">MIT</a>{{licensePost}}</p>
-      </div>
-    </div>
-  </div>
-  <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
-</body>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js'></script>
-<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
-<script  src="./assets/js/script.js"></script>
-
-</body>
+  <app-root></app-root>
+  <script src="assets/js/jquery-3.6.0.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/easePack.min.js"></script>
+  <script src="assets/js/raf.js"></script>
+  <script src="assets/js/tweenlite.min.js"></script>
+  <script src="assets/js/scriptv2.js"></script>
+<script src="runtime-es2015.0811dcefd377500b5b1a.js" type="module"></script><script src="runtime-es5.0811dcefd377500b5b1a.js" nomodule defer></script><script src="polyfills-es5.1a3c78b07cd6f16c6e9a.js" nomodule defer></script><script src="polyfills-es2015.1f913f16a2d346cc8bdc.js" type="module"></script><script src="main-es2015.e966a57b4c21223064f0.js" type="module"></script><script src="main-es5.e966a57b4c21223064f0.js" nomodule defer></script></body>
 </html>
