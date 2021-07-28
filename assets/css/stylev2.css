@@ -2,7 +2,7 @@
 body {
   align-items: center;
   overflow-x: hidden !important;
-  background: #222 !important; 
+  background: #000 !important; 
   font-family: 'Roboto Mono', monospace;
   max-width: 100% !important;
 }
