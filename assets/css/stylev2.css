@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Roboto+Mono&family=Roboto+Slab&family=Ubuntu&display=swap');
+body {
+  align-items: center;
+  overflow-x: hidden !important;
+  background: #000 !important; 
+  font-family: 'Roboto Mono', monospace;
+  max-width: 100% !important;
+}
+.navbar-brand{
+  color: #eeeeee !important;
+}
+.main-cont{
+  margin-top: 30vh;
+}
+.btn-outline-light{
+  background-color: #222;
+  color : #eeeeee;
+}
+.navbar{
+  font-family: 'Roboto Mono', monospace;
+}
+.rotating-text {
+  margin-left: -140px !important;
+  font-family: 'Inconsolata', monospace;
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: white;
+  transform: translateX(-80px);
+}
+.underline-row{
+  margin-left: -15px !important;
+}
+.rotating-text p {
+  margin: 0;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+.rotating-text p .word {
+  position: absolute;
+  display: flex;
+  opacity: 0;
+}
+.rotating-text p .word .letter {
+  transform-origin: center center 25px;
+}
+.rotating-text p .word .letter.out {
+  transform: rotateX(90deg);
+  transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+}
+.rotating-text p .word .letter.in {
+  transition: 0.38s ease;
+}
+.rotating-text p .word .letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.alizarin {
+  color: #e74c3c;
+}
+
+.wisteria {
+  color: #8e44ad;
+}
+
+.peter-river {
+  color: #3498db;
+}
+
+.emerald {
+  color: #2ecc71;
+}
+
+.sun-flower {
+  color: #f1c40f;
+}
+@media only screen and (min-width: 767px) {
+  .rotating-text {
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .rotating-text {
+    margin-left: -48px !important;
+  }
+  .underline-row{
+    margin-left: -15px !important;
+  }
+  .main-cont{
+    margin-top: 20vh;
+  }
+  .about-section{
+    margin-top:33vh;
+  }
+}
+.navbar-nav li a{
+  font-family: 'Roboto Slab', serif;
+}
+.underline{
+  min-height: 3px;
+  background-color: #fff;
+}
+.main-row{
+  margin-left:-29px !important;
+  max-height: 65px;
+}
+.text-heading{
+  font-family: 'Roboto Slab', serif;
+}
+.about-section{
+  margin-top:40vh;
+}
